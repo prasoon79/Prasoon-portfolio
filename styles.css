@@ -1,0 +1,142 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #1b1b1b; /* Dark background for the whole page */
+    color: #e0e0e0; /* Light color for the text */
+    line-height: 1.6;
+}
+
+/* Updated Navigation Bar Styles */
+header {
+    background-color: #121212; /* Darker navigation bar background */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #b0b0b0; /* Light gray color for text */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #333333; /* Darker hover background */
+    border-radius: 5px;
+    border-bottom: 2px solid #e74c3c; /* Red underline */
+    color: #ffffff; /* White text on hover */
+}
+
+/* Introduction Section */
+#home {
+    background: #2c2c2c; /* Darker background for the introduction */
+    color: #ffffff; /* Light color for text */
+    text-align: center;
+    padding: 80px 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    color: #e74c3c; /* Red color for the main heading */
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 1.2rem;
+    color: #b0b0b0; /* Light gray color for paragraph text */
+}
+
+/* Section Styles */
+section {
+    padding: 50px 20px;
+    margin: 20px 0;
+    background-color: #292929; /* Darker section background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 80%;
+    margin: 20px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+ul li {
+    background: #3a3a3a; /* Darker list item background */
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: #e0e0e0; /* Light text color */
+}
+
+h2 {
+    font-size: 2rem;
+    color: #e74c3c; /* Red color for section headings */
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #121212; /* Dark footer background */
+    color: #b0b0b0; /* Light gray text color */
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+/* Animation Styles */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    section {
+        width: 90%;
+        padding: 30px 10px;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+}

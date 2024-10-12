@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasoon Saraswat - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Prasoon Saraswat</h1>
+        <p>B.Tech Student in Computer Science and Engineering at VIT Bhopal University</p>
+        <p>Based in Mathura, Uttar Pradesh</p>
+        <p>Passionate about mobile games, cricket, and becoming a successful software developer.</p>
+    </section>
+
+    <section id="skills">
+        <h2><i class="fas fa-laptop-code"></i> Skills</h2>
+        <ul>
+            <li><i class="fas fa-check-circle"></i> C (Basic Knowledge)</li>
+            <li><i class="fas fa-check-circle"></i> Python (Basic Knowledge)</li>
+            <li><i class="fas fa-check-circle"></i> Kotlin (Currently Learning)</li>
+            <li><i class="fas fa-check-circle"></i> Jetpack Compose (Learning for Android Development)</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+        <ul>
+            <li><i class="fas fa-folder"></i> <strong>Unit Converter App:</strong> A simple app for unit conversions.</li>
+            <li><i class="fas fa-folder"></i> <strong>Captain Game:</strong> A basic game developed to enhance logical skills.</li>
+            <li><i class="fas fa-folder"></i> <strong>Rock Paper & Scissor Program:</strong> A game that implements basic logic.</li>
+            <li><i class="fas fa-folder"></i> <strong>Bank Account Program:</strong> A program simulating basic bank account operations.</li>
+            <li><i class="fas fa-folder"></i> <strong>Shopping List Application:</strong> Currently in development.</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2><i class="fas fa-briefcase"></i> Experience</h2>
+        <p>Contributor at GirlScript Summer of Code (GSSoC) 2024.</p>
+    </section>
+
+    <section id="contact">
+        <h2><i class="fas fa-envelope"></i> Contact Information</h2>
+        <p><i class="fas fa-envelope-open"></i> Email: prasoon004saraswat@gmail.com</p>
+        <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/prasoon-saraswat-452bb0285/" target="_blank">Prasoon Saraswat's LinkedIn</a></p>
+    </section>
+
+    <footer>
+        <p>© 2024 Prasoon Saraswat</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 60; // Adjust based on header height
+                if (scrollY >= sectionTop) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
